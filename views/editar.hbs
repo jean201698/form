@@ -1,0 +1,52 @@
+{{#unless dados}}
+<div class="m-2">
+  <form id="form" action="/update" method="post" class="needs-validation"  novalidate>
+     <h4 class="m-0">Atualizar cadastro</h4>
+    <div class="form-row" >
+    
+    <div class="col-md-2 mb-3 ">
+      <label for="validationTooltip01">Primeiro nome</label>
+      
+      <input type="hidden" value="{{id}}" name="id">
+      <input value="{{nome}}" type="text" class="form-control" id="nome" placeholder="Nome" name="nome">
+      
+       
+    </div>
+    <div class="col-md-2">
+      <label for="validationTooltip02">Sobrenome</label>
+      <input value="{{sobrenome}}" type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" name="sobrenome" >
+      
+    </div>
+    <div class="col-md-2">
+    
+      <label for="validationTooltip05">CEP</label>
+      <input value="{{cep}}" type="text" class="form-control" id="cep" placeholder="CEP" name="cep">
+    
+    </div>
+  </div>
+  
+  <div class=" form-row ">
+    <div class="col-md-2 mb-3">
+      <label for="validationTooltip03">Cidade</label>
+      <input value="{{localidade}}" type="text" class="form-control" id="localidade" placeholder="Cidade" name="localidade">
+      
+    </div>
+    <div class="col-md-2 mb-3">
+      <label for="validationTooltip04">Estado</label>
+      <input value="{{uf}}" type="text" class="form-control" id="uf" placeholder="Estado" name="uf">
+     
+    </div>
+
+    <div class="col-md-2 mb-3">
+      <label for="validationTooltip04">Bairro</label>
+      <input value="{{bairro}}" type="text" class="form-control" id="bairro" placeholder="Bairro" name="bairro">
+     
+    </div> 
+  </div>
+
+  <a href="/list"><button type="submit" id="enviar" class="btn btn-primary">Salvar</button></a>
+
+  
+</form>
+</div>
+{{/unless}}
